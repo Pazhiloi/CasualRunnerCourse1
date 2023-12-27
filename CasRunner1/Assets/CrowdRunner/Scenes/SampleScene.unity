@@ -2677,6 +2677,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1911089082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5528173178379222810, guid: 95184b464ca6cc54eb4a5a4ee87e124d, type: 3}
+  m_PrefabInstance: {fileID: 7767420059318009769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1935958059
 GameObject:
   m_ObjectHideFlags: 3
@@ -2782,6 +2787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973619926}
   - component: {fileID: 1973619927}
+  - component: {fileID: 1973619928}
   m_Layer: 0
   m_Name: Doors
   m_TagString: Untagged
@@ -2822,12 +2828,34 @@ MonoBehaviour:
   leftDoorRenderer: {fileID: 1816385861}
   rightDoorText: {fileID: 1048562509}
   leftDoorText: {fileID: 1410367515}
-  rightDoorBonusType: 2
-  rightDoorBonusAmount: 9
+  collider: {fileID: 1973619928}
+  rightDoorBonusType: 1
+  rightDoorBonusAmount: 3
   leftDoorBonusType: 3
-  leftDoorBonusAmount: 2
+  leftDoorBonusAmount: 3
   bonusColor: {r: 0, g: 0.5666666, b: 1, a: 1}
-  penaltyColor: {r: 0.8679245, g: 0, b: 0, a: 1}
+  penaltyColor: {r: 1, g: 0, b: 0.04843235, a: 1}
+--- !u!65 &1973619928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973619925}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 3.31, z: 0.19}
+  m_Center: {x: 0, y: 1.27, z: 0}
 --- !u!1 &2006617944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,6 +2867,7 @@ GameObject:
   - component: {fileID: 2006617945}
   - component: {fileID: 2006617946}
   - component: {fileID: 2006617947}
+  - component: {fileID: 2006617948}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2892,8 +2921,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runnersParent: {fileID: 637440885}
+  runnerPrefab: {fileID: 1911089082}
   radius: 0.4
   angle: 137.508
+--- !u!114 &2006617948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006617944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce01e86f555eb604ca5a06e3a527aa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crowdSystem: {fileID: 2006617947}
 --- !u!1001 &2098347052
 PrefabInstance:
   m_ObjectHideFlags: 0
