@@ -1168,6 +1168,11 @@ MonoBehaviour:
   - {fileID: 5891107395023326479, guid: 7134e1bb27a00264f892ca8e21078591, type: 3}
   - {fileID: 5891107395023326479, guid: 7134e1bb27a00264f892ca8e21078591, type: 3}
   - {fileID: 4454551475740461817, guid: 9e29e0611af6a2e4ab9ad93881f8acac, type: 3}
+  - {fileID: 3319237733235638905, guid: 2a93c396bfc425f48aaf541e8bacdf9a, type: 3}
+  levelChunks:
+  - {fileID: 3319237733235638905, guid: 71b9e00c86232f244876b46abce3bcaf, type: 3}
+  - {fileID: 5891107395023326479, guid: b9a2a4adcbb3c474eb5acc83fb874a0a, type: 3}
+  - {fileID: 3319237733235638905, guid: 2a93c396bfc425f48aaf541e8bacdf9a, type: 3}
 --- !u!1 &1214206212
 GameObject:
   m_ObjectHideFlags: 0
