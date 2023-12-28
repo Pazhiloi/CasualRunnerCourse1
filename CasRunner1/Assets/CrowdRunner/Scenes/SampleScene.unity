@@ -2092,6 +2092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 11400000, guid: 72962e2c8f59bcb4e99b740f822a6e7d, type: 2}
+  - {fileID: 11400000, guid: 50ed3922d3589c0428c6c8bbad9b7d12, type: 2}
+  - {fileID: 11400000, guid: 202ee5c6a7d3d3d46b02d9a354874d92, type: 2}
 --- !u!1 &1205221286
 GameObject:
   m_ObjectHideFlags: 0
