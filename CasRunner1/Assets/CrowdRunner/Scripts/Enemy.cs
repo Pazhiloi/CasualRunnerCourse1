@@ -43,7 +43,6 @@ public class Enemy : MonoBehaviour
         }
         runner.SetTarget();
         targetRunner = runner.transform;
-
         StartRunningTowardsTarget();
       }
     }
@@ -55,12 +54,14 @@ public class Enemy : MonoBehaviour
   } 
   private void RunTowardsTarget()
   {
-    if (targetRunner == null)return;
+     if (targetRunner == null){
+      return;
+     }
+    transform.position = Vector3.MoveTowards(transform.position, targetRunner.position,
+        Time.deltaTime * moveSpeed);
 
-    transform.position = Vector3.MoveTowards(transform.position, targetRunner.position, Time.deltaTime * moveSpeed);
 
-
-    if (Vector3.Distance(transform.position, targetRunner.position) < 0.1f)
+    if (Vector3.Distance(transform.position, targetRunner.position) < .1f)
     {
       Destroy(targetRunner.gameObject);
       Destroy(gameObject);
