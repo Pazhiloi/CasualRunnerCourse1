@@ -13,7 +13,11 @@ public class PlayerDetection : MonoBehaviour
 
   private void Update()
   {
-    DetectDoors();
+
+    if (GameManager.instance.IsGameState())
+    {
+      DetectDoors();
+    }
   }
   private void DetectDoors()
   {
