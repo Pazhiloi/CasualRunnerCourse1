@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
     } else if (gameState == GameManager.GameState.Gameover)
     {
       StopMoving();
+    } else if (gameState == GameManager.GameState.LevelComplete)
+    {
+      StopMoving();
     }
   }
 
