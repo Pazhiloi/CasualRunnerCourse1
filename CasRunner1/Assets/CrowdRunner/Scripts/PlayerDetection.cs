@@ -33,10 +33,9 @@ public class PlayerDetection : MonoBehaviour
         crowdSystem.ApplyBonus(bonusType, bonusAmount);
       }else if (detectedColliders[i].tag == "Finish")
       {
+        PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
         SceneManager.LoadScene(0);
       }
-
-
     }
   }
 }
