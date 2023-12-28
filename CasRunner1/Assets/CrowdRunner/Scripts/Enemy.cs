@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
           continue;
         }
         runner.SetTarget();
-        targetRunner = runner;
+        targetRunner = runner.transform;
 
         StartRunningTowardsTarget();
       }
