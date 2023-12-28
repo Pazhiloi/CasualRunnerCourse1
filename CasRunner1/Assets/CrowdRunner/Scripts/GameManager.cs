@@ -12,19 +12,17 @@ public class GameManager : MonoBehaviour
   public static Action<GameState> onGameStateChanged;
   private void Awake()
   {
-    if (instance == null)
-    {
+    if (instance != null)
       Destroy(gameObject);
-    }
     else
-    {
       instance = this;
-    }
   }
 
   public void SetGameState(GameState gameState)
   {
     this.gameState = gameState;
     onGameStateChanged?.Invoke(gameState);
+
+    Debug.Log("Game state : " + gameState);
   }
 }

@@ -784,6 +784,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1803577757}
+  - {fileID: 1433936532}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &467850612
@@ -873,7 +874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467850612}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29353178, y: 0.00000004029025, z: -0.000000012371439, w: 0.9559493}
+  m_LocalRotation: {x: 0.29353178, y: -0.00000004029025, z: 0.000000012371439, w: 0.9559493}
   m_LocalPosition: {x: 0.21392143, y: 12.028221, z: -22.705168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1627,6 +1628,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1214206213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1433936531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1433936532}
+  - component: {fileID: 1433936533}
+  m_Layer: 0
+  m_Name: UI Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1433936532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433936531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 427611442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433936533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433936531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce248ece0974db45acd71301806c0e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPanel: {fileID: 1481039510}
 --- !u!1 &1466986656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,7 +1907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533669028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29353178, y: 0.00000004029025, z: -0.000000012371439, w: 0.9559493}
+  m_LocalRotation: {x: 0.29353178, y: -0.00000004029025, z: 0.000000012371439, w: 0.9559493}
   m_LocalPosition: {x: 0.21392143, y: 12.028221, z: -22.705168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2137,7 +2183,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1607289300}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433936533}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1607289300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,6 +2514,7 @@ GameObject:
   - component: {fileID: 2006617946}
   - component: {fileID: 2006617947}
   - component: {fileID: 2006617948}
+  - component: {fileID: 2006617949}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2493,8 +2552,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crowdSystem: {fileID: 2006617947}
-  roadWidth: 10
+  playerAnimator: {fileID: 2006617949}
   moveSpeed: 10
+  roadWidth: 10
   slideSpeed: 6
 --- !u!114 &2006617947
 MonoBehaviour:
@@ -2525,6 +2585,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crowdSystem: {fileID: 2006617947}
+--- !u!114 &2006617949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006617944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79475ca7f9d77c4db64528d6f58810e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runnersParent: {fileID: 637440885}
 --- !u!1001 &2098347052
 PrefabInstance:
   m_ObjectHideFlags: 0
