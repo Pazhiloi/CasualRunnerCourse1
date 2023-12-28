@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
         runner.SetTarget();
         targetRunner = runner.transform;
         StartRunningTowardsTarget();
+        return;
       }
     }
   }
@@ -51,20 +52,19 @@ public class Enemy : MonoBehaviour
   {
     state = State.Running;
     GetComponent<Animator>().Play("Run"); 
-  } 
+  }
   private void RunTowardsTarget()
   {
-     if (targetRunner == null){
+    if (targetRunner == null)
       return;
-     }
-    transform.position = Vector3.MoveTowards(transform.position, targetRunner.position,
-        Time.deltaTime * moveSpeed);
 
+    transform.position = Vector3.MoveTowards(transform.position, targetRunner.position, Time.deltaTime * moveSpeed);
 
-    if (Vector3.Distance(transform.position, targetRunner.position) < .1f)
+    if (Vector3.Distance(transform.position, targetRunner.position) < .5f)
     {
-      Destroy(targetRunner.gameObject);
       Destroy(gameObject);
+      Destroy(targetRunner.gameObject);
     }
+    
   }
 }

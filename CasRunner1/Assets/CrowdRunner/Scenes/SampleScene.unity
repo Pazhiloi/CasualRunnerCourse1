@@ -969,7 +969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467850612}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2935318, y: 2.8401387e-15, z: -7.6684507e-17, w: 0.9559493}
+  m_LocalRotation: {x: 0.2935318, y: -2.8401387e-15, z: 7.6684507e-17, w: 0.9559493}
   m_LocalPosition: {x: 0.21392143, y: 12.028221, z: -22.705168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2493,7 +2493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533669028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2935318, y: 2.8401387e-15, z: -7.6684507e-17, w: 0.9559493}
+  m_LocalRotation: {x: 0.2935318, y: -2.8401387e-15, z: 7.6684507e-17, w: 0.9559493}
   m_LocalPosition: {x: 0.21392143, y: 12.028221, z: -22.705168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3227,7 +3227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crowdSystem: {fileID: 2006617947}
   playerAnimator: {fileID: 2006617949}
-  moveSpeed: 3
+  moveSpeed: 10
   roadWidth: 10
   slideSpeed: 6
 --- !u!114 &2006617947
