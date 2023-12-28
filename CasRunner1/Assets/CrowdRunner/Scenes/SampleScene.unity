@@ -969,7 +969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467850612}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29353178, y: -0.00000004029025, z: 0.000000012371439, w: 0.9559493}
+  m_LocalRotation: {x: 0.29353178, y: 0.00000004029025, z: -0.000000012371439, w: 0.9559493}
   m_LocalPosition: {x: 0.21392143, y: 12.028221, z: -22.705168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1609,20 +1609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71be2e247534de242ac7e630b98f3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunksPrefabs:
-  - {fileID: 3319237733235638905, guid: 71b9e00c86232f244876b46abce3bcaf, type: 3}
-  - {fileID: 4454551475740461817, guid: 9e29e0611af6a2e4ab9ad93881f8acac, type: 3}
-  - {fileID: 5891107395023326479, guid: 7134e1bb27a00264f892ca8e21078591, type: 3}
-  - {fileID: 3319237733235638905, guid: 722cea504ae02c1458e82ca558d6c959, type: 3}
-  - {fileID: 4454551475740461817, guid: 9e29e0611af6a2e4ab9ad93881f8acac, type: 3}
-  - {fileID: 5891107395023326479, guid: 7134e1bb27a00264f892ca8e21078591, type: 3}
-  - {fileID: 5891107395023326479, guid: 7134e1bb27a00264f892ca8e21078591, type: 3}
-  - {fileID: 4454551475740461817, guid: 9e29e0611af6a2e4ab9ad93881f8acac, type: 3}
-  - {fileID: 3319237733235638905, guid: 2a93c396bfc425f48aaf541e8bacdf9a, type: 3}
-  levelChunks:
-  - {fileID: 3319237733235638905, guid: 71b9e00c86232f244876b46abce3bcaf, type: 3}
-  - {fileID: 5891107395023326479, guid: b9a2a4adcbb3c474eb5acc83fb874a0a, type: 3}
-  - {fileID: 3319237733235638905, guid: 2a93c396bfc425f48aaf541e8bacdf9a, type: 3}
+  levels:
+  - {fileID: 11400000, guid: 72962e2c8f59bcb4e99b740f822a6e7d, type: 2}
 --- !u!1 &1205221286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533669028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29353178, y: -0.00000004029025, z: 0.000000012371439, w: 0.9559493}
+  m_LocalRotation: {x: 0.29353178, y: 0.00000004029025, z: -0.000000012371439, w: 0.9559493}
   m_LocalPosition: {x: 0.21392143, y: 12.028221, z: -22.705168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2983,6 +2971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a014fe5b773d07941bf8312108d0f90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
   runnersParent: {fileID: 637440885}
   runnerPrefab: {fileID: 1911089082}
   radius: 0.4

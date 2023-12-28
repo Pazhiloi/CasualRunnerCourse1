@@ -6,6 +6,7 @@ public class CrowdSystem : MonoBehaviour
 {
 
   [Header("Elements")]
+  [SerializeField] private PlayerAnimator playerAnimator;
   [SerializeField] private Transform runnersParent;
   [SerializeField] private GameObject runnerPrefab;
   [Header("Settings")]
@@ -49,14 +50,14 @@ public class CrowdSystem : MonoBehaviour
         int runnersToAdd = (runnersParent.childCount * bonusAmount) - runnersParent.childCount;
         AddRunners(runnersToAdd);
         break;
-      
+
 
       case BonusType.Difference:
         RemoveRunners(bonusAmount);
         break;
 
       case BonusType.Division:
-        int runnersToRemove = runnersParent.childCount - (runnersParent.childCount / bonusAmount) ;
+        int runnersToRemove = runnersParent.childCount - (runnersParent.childCount / bonusAmount);
         RemoveRunners(runnersToRemove);
         break;
     }
@@ -68,6 +69,7 @@ public class CrowdSystem : MonoBehaviour
     {
       Instantiate(runnerPrefab, runnersParent);
     }
+    playerAnimator.Run();
   }
 
   private void RemoveRunners(int amount)
