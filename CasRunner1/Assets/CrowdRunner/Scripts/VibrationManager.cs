@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class VibrationManager : MonoBehaviour
 {
-    private void Start() {
-      PlayerDetection.onDoorsHit += Vibrate;
-      Enemy.onRunnerDied += Vibrate;
-      GameManager.onGameStateChanged += GameStateChangedCallback;
-    }
+  [Header("Settings")]
 
-    private void OnDestroy() {
+  private bool haptics;
+  private void Start()
+  {
+    PlayerDetection.onDoorsHit += Vibrate;
+    Enemy.onRunnerDied += Vibrate;
+    GameManager.onGameStateChanged += GameStateChangedCallback;
+  }
+
+  private void OnDestroy()
+  {
     PlayerDetection.onDoorsHit -= Vibrate;
     Enemy.onRunnerDied -= Vibrate;
     GameManager.onGameStateChanged -= GameStateChangedCallback;
@@ -29,7 +34,21 @@ public class VibrationManager : MonoBehaviour
   }
 
 
-  private void Vibrate(){
-    Taptic.Light();
+  private void Vibrate()
+  {
+    if (haptics)
+    {
+      Taptic.Light();
+    }
   }
+
+  public void DisableVibrations()
+  {
+    haptics = false;
+  }
+  public void EnableVibrations()
+  {
+    haptics = true;
+  }
+
 }
