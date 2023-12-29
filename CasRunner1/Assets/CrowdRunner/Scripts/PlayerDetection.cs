@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerDetection : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerDetection : MonoBehaviour
 
   [Header("Elements")]
   [SerializeField] private CrowdSystem crowdSystem;
+
+  [Header("Events")]
+  public static Action onDoorsHit;
   Collider[] detectedColliders;
 
   private void Update()
@@ -33,6 +37,8 @@ public class PlayerDetection : MonoBehaviour
         BonusType bonusType = doors.GetBonusType(transform.position.x);
 
         doors.Disable();
+
+        onDoorsHit?.Invoke();
 
         crowdSystem.ApplyBonus(bonusType, bonusAmount);
       }else if (detectedColliders[i].tag == "Finish")
