@@ -15,6 +15,8 @@ public class PlayerDetection : MonoBehaviour
   public static Action onDoorsHit;
   Collider[] detectedColliders;
 
+
+
   private void Update()
   {
 

@@ -14,6 +14,7 @@ public class DataManager : MonoBehaviour
 
   private void Start()
   {
+    
     UpdateCoinsTexts();
   }
   private void Awake()
